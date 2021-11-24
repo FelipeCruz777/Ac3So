@@ -2,13 +2,13 @@ from Conexao import conn
 
 cursor = conn.cursor()
 
-# for i in range(0,3):
-#     nome = input("Insira seu nome: \n ")
-#     idade = int(input("Insira sua idade: \n"))
-#     cursor.execute(f"Insert into pessoa values(null,'{nome}',{idade})")
-#     conn.commit()
+for i in range(0,3):
+    nome = input("Insira seu nome: \n ")
+    idade = int(input("Insira sua idade: \n"))
+    cursor.execute(f"Insert into pessoa values(null,'{nome}',{idade})")
+    conn.commit()
 
-# cursor.close()
+cursor.close()
 cursor2 = conn.cursor()
 
 id = input("Insira o id do usuario que você quer saber a idade:\n")
